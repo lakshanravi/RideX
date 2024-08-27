@@ -1,0 +1,62 @@
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.hire-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hire-item {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.hire-item p {
+  margin: 5px 0;
+}
+
+
+/* Button container and individual buttons */
+.button {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.actionButton, .messageButton {
+  padding: 8px 12px;
+  width: 180px;
+  height: 52px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.actionButton {
+ 
+  background: linear-gradient(270deg, #12c940 0%, #bfdb35 100%);
+
+}
+
+.messageButton {
+  background: linear-gradient(270deg, #8631ED 0%, #F36EB6 100%);
+}

@@ -1,0 +1,69 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 20px;
+
+  color: #FFF;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 80px;
+}
+
+.about-title span {
+  background: linear-gradient(90deg, #F36EB6 41.23%, #8631ED 89.69%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-description {
+  text-align: center;
+  font-size: 18px;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.contact-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.other-details {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.details-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.other-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.other-details li {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 5px 0;
+}

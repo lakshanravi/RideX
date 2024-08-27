@@ -1,0 +1,24 @@
+.gradient-custom-2 {
+  background: linear-gradient(45deg, #9de2ff, #a4d9ff);
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -75px; /* Adjust based on design needs */
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.fallback-img {
+  border-radius: 50%;
+  border: 2px solid #000; /* Fallback styling */
+}
+
+.user-details {
+  text-align: center;
+  margin-top: 20px;
+}

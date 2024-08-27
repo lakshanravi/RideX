@@ -1,0 +1,60 @@
+/* General styling for the header */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 5%;
+  background-color: #000; /* Black background */
+}
+
+/* Styling for the logo image */
+.logo {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+}
+
+/* Styling for the navigation links */
+.nav-links {
+  display: flex;
+  gap: 50px;
+}
+
+/* General styling for each link */
+.nav-links a {
+  color: #FFF;
+text-align: center;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+  color: #F36EB6; /* Color change on hover */
+}
+
+/* Styling for the Login button */
+.loginButton {
+  width: 111px;
+  height: 37px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: linear-gradient(270deg, #8631ED 0%, #F36EB6 100%);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #FFF;
+text-align: center;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+/* Hover effect for button */
+button:hover {
+  background-color: #D12F8A; /* Darker shade on hover */
+}

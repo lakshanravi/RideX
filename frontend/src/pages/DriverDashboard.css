@@ -1,0 +1,40 @@
+
+/* DriverDashboard.css */
+
+.driver-dashboard {
+  padding: 100px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center; /* Center profile picture horizontally */
+  margin-bottom: 20px; /* Space between profile picture and user details */
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circle profile picture */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.fallback-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ddd; /* Light gray fallback background */
+}
+
+.user-details {
+  text-align: center; /* Center-align user details */
+}
+
+.user-details h2 {
+  margin: 10px 0; /* Space above and below name */
+}
+
+.user-details p {
+  margin: 5px 0; /* Space above and below each detail */
+}

@@ -1,0 +1,165 @@
+.mybooking-container {
+  padding: 20px;
+}
+
+.mybooking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mybooking-item {
+  display: flex;
+  justify-content: space-between; /* Space between details and button */
+  align-items: center; /* Align items vertically in the center */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.mybooking-details {
+  flex: 1; /* Takes up remaining space */
+}
+
+.mybooking-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.mybooking-item p {
+  margin: 5px 0;
+}
+
+
+.button-container {
+  margin-left: 20px; /* Adds some space between the details and the button */
+}
+
+
+.reviewButton {
+  padding: 10px 15px;
+  background-color: #32cd32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reviewButton:hover {
+  background-color: #228b22;
+}
+
+.review-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.review-popup-content {
+  background-color: #f0f8ff; /* Light blue background */
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #87cefa; /* Light sky blue border */
+}
+
+.review-popup-content h2 {
+  color: #ff6347; /* Tomato color for the heading */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  margin-top: 0;
+}
+
+.review-popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review-popup-content label {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #4169e1; /* Royal blue color for labels */
+}
+
+.review-popup-content input[type="number"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #87cefa;
+  background-color: #e0ffff; /* Light cyan background for input */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #00008b; /* Dark blue text */
+}
+
+.review-popup-content textarea {
+  resize: vertical;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #87cefa;
+  background-color: #e0ffff; /* Light cyan background for textarea */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #00008b; /* Dark blue text */
+}
+
+.review-popup-content button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.review-popup-content button[type="submit"] {
+  background-color: #32cd32; /* Lime green background */
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.review-popup-content button[type="submit"]:hover {
+  background-color: #228b22; /* Forest green on hover */
+}
+
+.review-popup-content button[type="button"] {
+  background-color: #ff4500; /* Orange red background */
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.review-popup-content button[type="button"]:hover {
+  background-color: #ff6347; /* Tomato color on hover */
+}
+
+.feedback-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0.9;
+  transition: opacity 0.5s ease;
+}
+
+.feedback-message.success {
+  background-color: #28a745;
+}
+
+.feedback-message.error {
+  background-color: #dc3545;
+}

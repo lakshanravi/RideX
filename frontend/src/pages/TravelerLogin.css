@@ -1,0 +1,57 @@
+/* General container styling */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: #000; /* Black background */
+  padding: 20px;
+}
+
+/* Styling for the form title */
+.login-title {
+  font-size: 24px;
+  color: #FFF; /* White text */
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #333; /* Dark background for the form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Input field styling */
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(270deg, #8631ED 0%, #F36EB6 100%); /* Gradient background */
+  color: #FFF; /* White text */
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+/* Hover effect for the login button */
+.login-button:hover {
+  background-color: #D12F8A; /* Darker shade on hover */
+}

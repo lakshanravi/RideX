@@ -1,0 +1,143 @@
+/* General container styling for the dashboard */
+.traveler-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background */
+}
+
+/* Profile picture container styling */
+.profile-pic-container {
+  margin-bottom: 20px;
+}
+
+/* Profile picture styling */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #333; /* Dark border */
+  object-fit: cover;
+}
+
+.fallback-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ccc; /* Gray background for fallback image */
+}
+
+/* User details styling */
+.user-details {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user-details h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.user-details p {
+  font-size: 16px;
+  color: #333; /* Dark text */
+}
+
+/* Styling for the create travel post section */
+.create-travel-post {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #333; /* Dark background for the form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+/* Title styling in the travel post section */
+.create-travel-post h2 {
+  font-size: 24px;
+  color: #fff; /* White text */
+  margin-bottom: 15px;
+}
+
+/* Form styling */
+.create-travel-post form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.create-travel-post label {
+  color: #fff; /* White text */
+  margin-bottom: 10px;
+}
+
+/* Input field styling */
+.create-travel-post input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.create-travel-post button {
+  padding: 12px;
+  background: linear-gradient(270deg, #8631ED 0%, #F36EB6 100%); /* Gradient background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the create travel post button */
+.create-travel-post button:hover {
+  background-color: #D12F8A; /* Darker shade on hover */
+}
+
+/* Status message styling */
+.create-travel-post p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff; /* White text */
+}
+
+/* Styling for the dashboard buttons */
+.dashboard-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Space between buttons */
+  margin-bottom: 20px;
+}
+
+.dashboard-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  background: linear-gradient(270deg, #8631ED 0%, #F36EB6 100%); /* Gradient background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s;
+}
+
+.dashboard-button:hover {
+  background-color: #D12F8A; /* Darker shade on hover */
+}
+

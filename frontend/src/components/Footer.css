@@ -1,0 +1,18 @@
+.footer {
+  width: 100%;
+  
+  padding: 20px 0; /* Padding to give some space inside the footer */
+  text-align: center; /* Center the text */
+  position: relative;
+  bottom: 0;
+}
+
+.footer-text {
+  color: #fefefe; /* White text */
+  font-size: 14px; /* Small text size */
+  font-weight: 400; /* Normal weight */
+}
+
+.footer-text:hover {
+  opacity: 0.8; /* Slight opacity change on hover for effect */
+}

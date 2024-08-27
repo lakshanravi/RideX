@@ -1,0 +1,118 @@
+/* AllTravellerListenings.css */
+
+/* Container for all traveler listenings */
+.all-traveller-listenings-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* List of traveler listenings */
+.traveller-listenings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Individual traveler item styling */
+.traveller {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.traveler-profilePic {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  border-radius: 8px;
+  background: url('<path-to-image>') lightgray -52px -3.263px / 194.545% 129.57% no-repeat;
+}
+
+/* Details section styling */
+.traveler-details {
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.traveler-details h2 {
+  margin: 0;
+  color: #FFF;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.traveler-details .place {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.traveler-details .place .heading p {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.traveler-details .place .details {
+  margin-left: 40px;
+}
+
+.traveler-details .place .details p {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Button container and individual buttons */
+.button {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.actionButton, .messageButton {
+  padding: 8px 12px;
+  width: 180px;
+  height: 52px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.actionButton {
+  /*background-color: transparent;
+  border: 2px solid #F36EB6;*/
+    background: linear-gradient(270deg, #8631ED 0%, #F36EB6 100%);
+
+}
+
+.messageButton {
+  background: linear-gradient(270deg, #8631ED 0%, #F36EB6 100%);
+}
