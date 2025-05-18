@@ -68,20 +68,21 @@ const getBookingsByUser = async (req, res) => {
   }
 };
 
-const getBookingsByHire = async (req, res) => {
+const getBookingsByDriver = async (req, res) => {
   try {
-    const hireId = req.params.hireId;
-    const bookings = await Booking.find({ hire: hireId }).populate('hire').populate({path:'user',select : 'firstname email'});
+    const { driverId } = req.user;
+    const bookings = await Booking.find({ driver: driverId }).populate('hire').populate({path:'user',select : 'firstname email'});
     res.json(bookings);
-    res.json(bookings.seatsBooked);
+    
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Error retrieving bookings' });
   }
 };
 
+
 module.exports = {
   createBooking,
   getBookingsByUser,
-  getBookingsByHire,
+  getBookingsByDriver,
 };

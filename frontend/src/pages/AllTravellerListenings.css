@@ -44,7 +44,7 @@
   flex-shrink: 0;
   margin-right: 20px;
   border-radius: 8px;
-  background: url('<path-to-image>') lightgray -52px -3.263px / 194.545% 129.57% no-repeat;
+  background: url('') lightgray -52px -3.263px / 194.545% 129.57% no-repeat;
 }
 
 /* Details section styling */
@@ -59,6 +59,13 @@
   color: #FFF;
   font-size: 25px;
   font-weight: 600;
+}
+
+.traveler-details h3 {
+  margin: 0;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .traveler-details .place {

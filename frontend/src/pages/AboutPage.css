@@ -4,16 +4,18 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 40px 20px;
-
-  color: #FFF;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-color: #0f0f0f; /* dark background */
+  color: #ffffff; /* white text */
+  box-sizing: border-box;
 }
 
 .about-title {
   text-align: center;
-  font-size: 55px;
-  font-weight: 600;
-  line-height: 80px;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .about-title span {
@@ -27,34 +29,48 @@
   text-align: center;
   font-size: 18px;
   max-width: 800px;
-  margin-top: 20px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #d0d0d0;
 }
 
 .contact-section {
-  margin-top: 40px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .contact-title {
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 600;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .contact-section p {
   font-size: 16px;
-  line-height: 24px;
+  color: #bbbbbb;
+  margin: 4px 0;
+}
+
+.contact-section a {
+  color: #F36EB6;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
 }
 
 .other-details {
-  margin-top: 40px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .details-title {
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 600;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .other-details ul {
@@ -65,5 +81,6 @@
 .other-details li {
   font-size: 16px;
   line-height: 24px;
-  margin: 5px 0;
+  color: #bbbbbb;
+  margin: 6px 0;
 }

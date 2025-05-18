@@ -18,6 +18,10 @@ import MyTravelListenings from './pages/MyTravelListenings'
 import HireListenings from './pages/HireListenings.js';
 import HireBooking from './pages/HireBooking.js';
 import MyBooking from './pages/MyBookings.js';
+import MyHire from './pages/MyHires.js';
+import MyBookingByDriver from './pages/MyBookingsByDriver.js';
+import MyReview from './pages/MyReview.js';
+import Services from './pages/Services.jsx';
 
 function App() {
   const token = localStorage.getItem('token');
@@ -32,6 +36,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/services" element={<Services />} />
         <Route
           path="/driverdashboard"
           element={token ? <DriverDashboard /> : <Navigate to="/login" />}
@@ -64,12 +69,21 @@ function App() {
           path="/mybooking"
           element={token ? <MyBooking /> : <Navigate to="/login" />}
         />
+        <Route
+          path="/myhire"
+          element={token ? <MyHire /> : <Navigate to="/login" />} 
+        />
+
+        <Route path="/mybookingbydriver"
+         element={token ? <MyBookingByDriver /> : <Navigate to="/login" />} />
+
+        <Route path="/myreview"
+         element={token ? <MyReview /> : <Navigate to="/login" />} />
        
         <Route path="/about" element={<AboutPage />} />
         <Route path="/travelersignup" element={<TravelerSignup />} />
         <Route path="/driversignup" element={<DriverSignup />} />
       </Routes>
-      <Footer />
     </div>
 
 

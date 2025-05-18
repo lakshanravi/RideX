@@ -1,33 +1,33 @@
 /* General container styling */
-.login-container {
+.signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 60vh;
   background-color: #000; /* Black background */
   padding: 20px;
 }
 
-/* Styling for the form title */
-.login-title {
+/* Title styling */
+.signup-title {
   font-size: 24px;
-  color: #FFF; /* White text */
+  color: #FFF;
   margin-bottom: 20px;
 }
 
 /* Form styling */
-.login-form {
+.signup-form {
   width: 100%;
   max-width: 400px;
   padding: 30px;
   border-radius: 8px;
-  background-color: #333; /* Dark background for the form */
+  background-color: #333; /* Dark background */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Input field styling */
-.login-input {
+/* Input styling */
+.signup-input {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -38,25 +38,25 @@
 }
 
 /* Button styling */
-.login-button {
+.signup-button {
   width: 100%;
   padding: 12px;
   border-radius: 10px;
-  background: linear-gradient(270deg, #8631ED 0%, #F36EB6 100%); /* Gradient background */
-  color: #FFF; /* White text */
+  background: linear-gradient(270deg, #8631ED 0%, #F36EB6 100%);
+  color: #FFF;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
   border: none;
 }
 
-/* Hover effect for the login button */
-.login-button:hover {
-  background-color: #D12F8A; /* Darker shade on hover */
+/* Button hover */
+.signup-button:hover {
+  background-color: #D12F8A;
 }
-/* General message styling */
-.login-message {
+
+/* Message container */
+.signup-message {
   margin-top: 20px;
   padding: 10px;
   border-radius: 5px;
@@ -64,15 +64,15 @@
   font-weight: bold;
 }
 
-/* Success message styling */
-.login-message.success {
+/* Success message */
+.signup-message.success {
   background-color: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
 }
 
-/* Error message styling */
-.login-message.error {
+/* Error message */
+.signup-message.error {
   background-color: #f8d7da;
   color: #721c24;
   border: 1px solid #f5c6cb;

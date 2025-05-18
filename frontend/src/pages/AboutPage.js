@@ -5,6 +5,7 @@ function AboutPage() {
   return (
     <div className="about-page">
       <h1 className="about-title">About <span>Our Platform</span></h1>
+      
       <p className="about-description">
         We are dedicated to providing a platform that connects travelers and drivers
         for convenient and comfortable shared journeys. Our mission is to make travel 
@@ -14,8 +15,8 @@ function AboutPage() {
 
       <div className="contact-section">
         <h2 className="contact-title">Contact Us</h2>
-        <p>Email: support@yourplatform.com</p>
-        <p>Phone: +123 456 7890</p>
+        <p>Email: <a href="mailto:support@yourplatform.com">support@yourplatform.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
         <p>Address: 123 Travel Lane, Journey City, Country</p>
       </div>
 

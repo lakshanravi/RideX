@@ -108,7 +108,7 @@ const loginAdmin = async (req, res) => {
       return res.status(401).json({ error: "Invalid credentials" });
     }
 
-    const token = jwt.sign({ adminId: admin._id, isAdmin: true }, JWT_SECRET, { expiresIn: '10h' });
+    const token = jwt.sign({ adminId: admin._id, isAdmin: true }, JWT_SECRET, { expiresIn: '1h' });
 
     res.status(200).json({ token, admin: { name: admin.name } });
   } catch (error) {

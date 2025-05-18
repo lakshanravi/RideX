@@ -110,9 +110,15 @@ const AllTravellerListenings = () => {
           {filteredListenings.length > 0 ? (
             filteredListenings.map((listening) => (
               <div key={listening._id} className="traveller">
-                <div className="traveler-profilePic"></div>
+      
+
+
+
+      
                 <div className="traveler-details">
-                  <h2>{listening.name}</h2>
+                <h2>
+    <span>{listening.userId.firstname}</span> - <span>{listening.userId.email}</span>
+  </h2>
                   <div className="place">
                     <div className="heading">
                       <p>Departure:</p>

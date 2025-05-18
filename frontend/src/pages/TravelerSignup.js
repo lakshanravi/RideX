@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './TravelerSignup.css'; // Import the CSS file
+import { useNavigate } from 'react-router-dom';
 
 const TravelerSignup = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ const TravelerSignup = () => {
     email: '',
     password: ''
   });
-
+  const navigate =useNavigate();
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
@@ -28,6 +29,7 @@ const TravelerSignup = () => {
       const response = await axios.post('http://localhost:3002/api/users/createuser', formData);
       setSuccess(response.data.message);
       setError(null);
+      navigate('/login');
     } catch (error) {
       setError(error.response.data.error || "An error occurred");
       setSuccess(null);

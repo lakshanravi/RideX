@@ -1,0 +1,42 @@
+.services-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+  color: #FFF;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 80px;
+}
+
+.services-title span {
+  background: linear-gradient(90deg, #F36EB6 41.23%, #8631ED 89.69%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-description {
+  text-align: center;
+  font-size: 18px;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.services-list {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.services-list li {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 8px 0;
+}

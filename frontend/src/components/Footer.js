@@ -1,11 +1,11 @@
 // src/components/Footer.js
 import React from 'react';
-import "./Footer.css"
+import "./Footer.css";
 
 function Footer() {
   return (
-    <footer>
-      <p>© 2024 HIRE Ride Sharing App</p>
+    <footer className="footer">
+      <p className="footer-text">© 2024 HIRE Ride Sharing App</p>
     </footer>
   );
 }

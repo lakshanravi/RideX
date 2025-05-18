@@ -1,0 +1,32 @@
+# Node modules folder (do not track dependencies)
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output folders
+build/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor folders and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Optional: lock files if you don't want to track them (usually you want to keep them)
+# package-lock.json
+# yarn.lock
+
+# Mac system files
+.AppleDouble
+.LSOverride

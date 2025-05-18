@@ -6,7 +6,7 @@ const TravellerListening = require('../models/travellerListening.js'); // Assumi
 const getAllListenings = async (req, res) => {
   try {
     const listenings = await TravellerListening.find()
-      .populate('userId', 'username profilePic') // Populate the userId field with username and profilePic
+      .populate('userId', 'firstname email') // Populate the userId field with username and profilePic
       .exec();
 
     res.json(listenings); // Return array of listening entries with populated user details

@@ -1,18 +1,21 @@
 .footer {
   width: 100%;
-  
-  padding: 20px 0; /* Padding to give some space inside the footer */
-  text-align: center; /* Center the text */
+  background-color: #0f0f0f; /* Dark background to match site theme */
+  padding: 20px 0;
+  text-align: center;
   position: relative;
   bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* subtle top border */
 }
 
 .footer-text {
-  color: #fefefe; /* White text */
-  font-size: 14px; /* Small text size */
-  font-weight: 400; /* Normal weight */
+  color: #cccccc; /* Soft white/gray for better readability */
+  font-size: 14px;
+  font-weight: 400;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .footer-text:hover {
-  opacity: 0.8; /* Slight opacity change on hover for effect */
+  color: #F36EB6; /* Accent hover color to match your gradient theme */
+  opacity: 1;
 }

@@ -31,7 +31,7 @@ const DriverSignup = () => {
       const response = await axios.post('http://localhost:3002/api/drivers/createdriver', formData);
       setSuccess(response.data.message);
       setError(null);
-      navigate('/driverlogin');
+      navigate('/login');
     } catch (error) {
       setError(error.response.data.error || "An error occurred");
       setSuccess(null);

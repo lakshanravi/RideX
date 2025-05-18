@@ -42,7 +42,7 @@ const createReview = async (req, res) => {
 
 const getReviewsForDriver = async (req, res) => {
   try {
-    const { driverId } = req.params;
+    const { driverId } = req.user;
 
     // Validate the driver
     const reviewed = await Driver.findById(driverId);
@@ -52,7 +52,7 @@ const getReviewsForDriver = async (req, res) => {
 
     const reviews = await Review.find({ reviewed: driverId })
     
-      .populate('reviewer', 'name email') // Populate reviewer details
+      .populate('reviewer', 'firstname email') // Populate reviewer details
       .populate('reviewed', 'name') // Populate reviewed details
       .select('rating reviewText reviewer createdAt'); // Select desired fields
 
