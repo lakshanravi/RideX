@@ -2,6 +2,7 @@
 import React from 'react';
 import AboutPage from './AboutPage';
 import Footer from '../components/Footer';
+import Services from './Services';
 import { useNavigate } from 'react-router-dom';
 import { Car, Users, Shield, Star } from 'lucide-react';
 
@@ -323,6 +324,7 @@ const LandingPage = () => {
       {/* About Section */}
       <section style={styles.aboutSection}>
         <AboutPage />
+        <Services />
         <Footer />
       </section>
 

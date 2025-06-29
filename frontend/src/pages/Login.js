@@ -1,16 +1,118 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import './Login.css'; // Importing the updated CSS file
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('driver'); // Default to 'driver'
-  const [message, setMessage] = useState(''); // For displaying success or error message
-  const [messageType, setMessageType] = useState(''); // 'success' or 'error'
+  const [role, setRole] = useState('driver');
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState('');
 
   const navigate = useNavigate();
+
+  const styles = {
+    container: {
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '20px'
+    },
+    formContainer: {
+      background: 'white',
+      borderRadius: '16px',
+      padding: '48px',
+      boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+      maxWidth: '450px',
+      width: '100%'
+    },
+    title: {
+      fontSize: '2.5rem',
+      fontWeight: 'bold',
+      color: '#111827',
+      textAlign: 'center',
+      marginBottom: '32px'
+    },
+    form: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '24px'
+    },
+    inputGroup: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '8px'
+    },
+    label: {
+      fontSize: '1rem',
+      fontWeight: '600',
+      color: '#374151'
+    },
+    input: {
+      padding: '12px 16px',
+      border: '2px solid #e5e7eb',
+      borderRadius: '8px',
+      fontSize: '1rem',
+      transition: 'border-color 0.3s ease',
+      outline: 'none'
+    },
+    inputFocus: {
+      borderColor: '#667eea'
+    },
+    radioGroup: {
+      display: 'flex',
+      gap: '24px',
+      marginTop: '8px'
+    },
+    radioLabel: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      fontSize: '1rem',
+      color: '#374151',
+      cursor: 'pointer'
+    },
+    radio: {
+      width: '18px',
+      height: '18px',
+      cursor: 'pointer'
+    },
+    button: {
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      color: 'white',
+      padding: '14px 24px',
+      border: 'none',
+      borderRadius: '8px',
+      fontSize: '1.1rem',
+      fontWeight: '600',
+      cursor: 'pointer',
+      transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+      marginTop: '16px'
+    },
+    buttonHover: {
+      transform: 'translateY(-2px)',
+      boxShadow: '0 10px 20px rgba(0,0,0,0.2)'
+    },
+    message: {
+      padding: '12px 16px',
+      borderRadius: '8px',
+      textAlign: 'center',
+      marginTop: '16px',
+      fontWeight: '500'
+    },
+    successMessage: {
+      background: '#dcfce7',
+      color: '#166534',
+      border: '1px solid #bbf7d0'
+    },
+    errorMessage: {
+      background: '#fef2f2',
+      color: '#dc2626',
+      border: '1px solid #fecaca'
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,11 +127,11 @@ function Login() {
 
       // Store JWT token and user role in local storage
       localStorage.setItem('token', response.data.token);
-      localStorage.setItem('userRole', role); // Store the user role (driver or traveler)
+      localStorage.setItem('userRole', role);
 
-      // Trigger a custom event to notify other components (like Header) to refresh
+      // Trigger a custom event to notify other components
       const loginEvent = new Event('storage');
-      window.dispatchEvent(loginEvent); // Notify Header of login change
+      window.dispatchEvent(loginEvent);
 
       // Set success message
       setMessageType('success');
@@ -43,72 +145,97 @@ function Login() {
 
     } catch (error) {
       console.error('Login failed:', error);
-
-      // Set error message
       setMessageType('error');
       setMessage('Login failed: Please check your credentials.');
     }
   };
 
   return (
-    <div className="login-container">
-      <h2 className="login-title">Login</h2>
-      <form onSubmit={handleSubmit} className="login-form">
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-            autoComplete="off"  // Disable autocomplete to avoid warnings
-            className="login-input"
-          />
-        </label>
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            autoComplete="off"  // Disable autocomplete to avoid warnings
-            className="login-input"
-          />
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="role"
-            value="driver"
-            checked={role === 'driver'}
-            onChange={() => setRole('driver')}
-            autoComplete="off"  // Disable autocomplete to avoid warnings
-            className="login-radio"
-          />
-          Driver
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="role"
-            value="traveler"
-            checked={role === 'traveler'}
-            onChange={() => setRole('traveler')}
-            className="login-radio"
-            autoComplete="off"  // Disable autocomplete to avoid warnings
-          />
-          Traveler
-        </label>
-        <button type="submit" className="login-button">Login</button>
-      </form>
+    <div style={styles.container}>
+      <div style={styles.formContainer}>
+        <h2 style={styles.title}>Login</h2>
+        <form onSubmit={handleSubmit} style={styles.form}>
+          <div style={styles.inputGroup}>
+            <label style={styles.label}>Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              style={styles.input}
+              onFocus={(e) => e.target.style.borderColor = '#667eea'}
+              onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
+              required
+            />
+          </div>
 
-      {/* Display success or error message */}
-      {message && (
-        <div className={`login-message ${messageType}`}>
-          {message}
-        </div>
-      )}
+          <div style={styles.inputGroup}>
+            <label style={styles.label}>Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
+              style={styles.input}
+              onFocus={(e) => e.target.style.borderColor = '#667eea'}
+              onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
+              required
+            />
+          </div>
+
+          <div style={styles.inputGroup}>
+            <label style={styles.label}>I am a:</label>
+            <div style={styles.radioGroup}>
+              <label style={styles.radioLabel}>
+                <input
+                  type="radio"
+                  name="role"
+                  value="driver"
+                  checked={role === 'driver'}
+                  onChange={() => setRole('driver')}
+                  style={styles.radio}
+                />
+                Driver
+              </label>
+              <label style={styles.radioLabel}>
+                <input
+                  type="radio"
+                  name="role"
+                  value="traveler"
+                  checked={role === 'traveler'}
+                  onChange={() => setRole('traveler')}
+                  style={styles.radio}
+                />
+                Traveler
+              </label>
+            </div>
+          </div>
+
+          <button 
+            type="submit" 
+            style={styles.button}
+            onMouseOver={(e) => {
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = 'none';
+            }}
+          >
+            Login
+          </button>
+        </form>
+
+        {message && (
+          <div style={{
+            ...styles.message,
+            ...(messageType === 'success' ? styles.successMessage : styles.errorMessage)
+          }}>
+            {message}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
